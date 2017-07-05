@@ -1,0 +1,27 @@
+{:uriI"éfile://app/assets/stylesheets/simple-line-icons/Readme.txt?type=text/plain&id=cee8ceee00b69494cdeefdd875b14cd69c9ade3b3233779d471d9ddf999cb5bf:ET:load_pathI"app/assets/stylesheets;T:filenameI"8app/assets/stylesheets/simple-line-icons/Readme.txt;T:	nameI"simple-line-icons/Readme;T:logical_pathI"!simple-line-icons/Readme.txt;T:content_typeI"text/plain;T:sourceI"SIMPLE LINE ICONS
+======================================================================================
+
+Simple Line Icons is 162 simple stroke icons that are great for mobile applications, 
+websites, user interfaces, etc. All icons were converted from the same beautiful 
+simple line icon sets released previously on GraphicBurger.
+
+You can checkout the vector PSD versions of these icons on the following links 
+
+* http://graphicburger.com/simple-line-icons-set-vol-1/
+* http://graphicburger.com/simple-line-icons-set-vol-2/
+* http://graphicburger.com/simple-line-icons-set-vol-3/
+* http://graphicburger.com/simple-line-icons-set-vol-4/
+
+To modify your generated font, use the *dev.svg* file, located in the *fonts* folder in 
+this package. You can import this dev.svg file to the IcoMoon app. All the tags (class 
+names) and the Unicode points of your glyphs are saved in this file.
+
+These fonts converted to SVG using Illustrator, the SVG was then converted into a font 
+using the awesome Icooon app (http://icomoon.io/app)
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"4processors:type=text/plain&file_type=text/plain;TTI"Ffile-digest://app/assets/stylesheets/simple-line-icons/Readme.txt;TTF:charsetI"
+utf-8;F:digest"%x˜≥kÉOÌMè¯©Lly{Ÿﬂ)jœI
+˜lŸ2æ:lengthi:dependencies_digest"%‰822§‰Üƒ¨àπ5¢YÈ/Øûauxﬁ\„
+&ΩÁ¢˛ª:idI"Ecee8ceee00b69494cdeefdd875b14cd69c9ade3b3233779d471d9ddf999cb5bf;F:
+mtimel+~G›X

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="Preview page of Metronic Admin Theme #1 for blank page layout" name="description"/>
+    <meta content="" name="author"/>
+    <title>MetronicRails</title>
+    <%= yield(:other_css) %>
+    <%= csrf_meta_tags %>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white page-md">
+    <div class="page-wrapper">
+      <!-- BEGIN HEADER -->
+      <div class="page-header navbar navbar-fixed-top">
+        <!-- BEGIN HEADER INNER -->
+        <div class="page-header-inner ">
+          <!-- BEGIN LOGO -->
+          <div class="page-logo">
+            <a href="dashboard.html"> <img src="<%= asset_path 'main_logo.png' %>" alt="logo" class="logo-default" /> </a>
+            <div class="menu-toggler sidebar-toggler">
+              <span></span>
+            </div>
+          </div>
+          <!-- END LOGO -->
+          <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+          <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+            <span></span>
+          </a>
+          <!-- END RESPONSIVE MENU TOGGLER -->
+          <!-- BEGIN TOP NAVIGATION MENU -->
+          <div class="top-menu">
+            <ul class="nav navbar-nav pull-right">
+              <!-- BEGIN NOTIFICATION DROPDOWN -->
+              <!-- DOC: Apply "dropdown-dark" class after "dropdown-extended" to change the dropdown styte -->
+              <!-- DOC: Apply "dropdown-hoverable" class after below "dropdown" and remove data-toggle="dropdown" data-hover="dropdown" data-close-others="true" attributes to enable hover dropdown mode -->
+              <!-- DOC: Remove "dropdown-hoverable" and add data-toggle="dropdown" data-hover="dropdown" data-close-others="true" attributes to the below A element with dropdown-toggle class -->
+              <li class="dropdown dropdown-extended dropdown-notification" id="header_notification_bar">
+                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                  <i class="icon-bell"></i>
+                  <span class="badge badge-default"> 7 </span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="external">
+                    <h3> <span class="bold">12 pending</span> notifications</h3>
+                    <a href="#">view all</a>
+                  </li>
+                  <li>
+                    <ul class="dropdown-menu-list scroller" style="height: 250px;" data-handle-color="#637283">
+                      <li>
+                        <a href="javascript:;">
+                        <span class="time">just now</span>
+                        <span class="details">
+                        <span class="label label-sm label-icon label-success">
+                        <i class="fa fa-plus"></i>
+                        </span> New user registered. </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">
+                        <span class="time">3 mins</span>
+                        <span class="details">
+                        <span class="label label-sm label-icon label-danger">
+                        <i class="fa fa-bolt"></i>
+                        </span> Server #12 overloaded. </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">
+                        <span class="time">10 mins</span>
+                        <span class="details">
+                        <span class="label label-sm label-icon label-warning">
+                        <i class="fa fa-bell-o"></i>
+                        </span> Server #2 not responding. </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">
+                        <span class="time">14 hrs</span>
+                        <span class="details">
+                        <span class="label label-sm label-icon label-info">
+                        <i class="fa fa-bullhorn"></i>
+                        </span> Application error. </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">
+                        <span class="time">2 days</span>
+                        <span class="details">
+                        <span class="label label-sm label-icon label-danger">
+                        <i class="fa fa-bolt"></i>
+                        </span> Database overloaded 68%. </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">
+                        <span class="time">3 days</span>
+                        <span class="details">
+                        <span class="label label-sm label-icon label-danger">
+                        <i class="fa fa-bolt"></i>
+                        </span> A user IP blocked. </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">
+                        <span class="time">4 days</span>
+                        <span class="details">
+                        <span class="label label-sm label-icon label-warning">
+                        <i class="fa fa-bell-o"></i>
+                        </span> Storage Server #4 not responding dfdfdfd. </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">
+                        <span class="time">5 days</span>
+                        <span class="details">
+                        <span class="label label-sm label-icon label-info">
+                        <i class="fa fa-bullhorn"></i>
+                        </span> System Error. </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">
+                        <span class="time">9 days</span>
+                        <span class="details">
+                        <span class="label label-sm label-icon label-danger">
+                        <i class="fa fa-bolt"></i>
+                        </span> Storage server failed. </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- END NOTIFICATION DROPDOWN -->
+
+              <!-- BEGIN USER LOGIN DROPDOWN -->
+              <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+              <li class="dropdown dropdown-user">
+                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                <img alt="" class="img-circle" src="<%= asset_path 'company_logo.png' %>" />
+                <span class="username username-hide-on-mobile"> Nick </span>
+                <i class="fa fa-angle-down"></i>
+                <span class="companyname companyname-hide-on-mobile"> Vrma Company </span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-default">
+                  <li>
+                    <a href="#">
+                      <i class="icon-user"></i> Agent Profile </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="icon-bell"></i> Notification Settings</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="icon-key"></i> Change Password </a>
+                  </li>
+
+                </ul>
+              </li>
+              <!-- END USER LOGIN DROPDOWN -->
+              <!-- BEGIN QUICK SIDEBAR TOGGLER -->
+              <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+              <li>
+                <a href="#" class="logout_toggle">
+                  <i class="icon-logout"></i>
+                </a>
+              </li>
+              <!-- END QUICK SIDEBAR TOGGLER -->
+            </ul>
+          </div>
+          <!-- END TOP NAVIGATION MENU -->
+        </div>
+        <!-- END HEADER INNER -->
+      </div>
+      <!-- END HEADER -->
+      <!-- BEGIN HEADER & CONTENT DIVIDER -->
+      <div class="clearfix"> </div>
+      <!-- END HEADER & CONTENT DIVIDER -->
+      <!-- BEGIN CONTAINER -->
+      <div class="page-container">
+        <!-- BEGIN SIDEBAR -->
+        <div class="page-sidebar-wrapper">
+          <!-- BEGIN SIDEBAR -->
+          <div class="page-sidebar-wrapper">
+            <!-- BEGIN SIDEBAR -->
+            <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+            <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+            <div class="page-sidebar navbar-collapse collapse">
+              <!-- BEGIN SIDEBAR MENU -->
+              <!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+              <!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+              <!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+              <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+              <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+              <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+              <ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
+                <!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
+                <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+                <li class="sidebar-toggler-wrapper hide">
+                  <div class="sidebar-toggler">
+                    <span></span>
+                  </div>
+                </li>
+                <!-- END SIDEBAR TOGGLER BUTTON -->
+                <!-- DOC: To remove the search box from the sidebar you just need to completely remove the below "sidebar-search-wrapper" LI element -->
+
+                <!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
+                <!-- DOC: Apply "sidebar-search-bordered" class the below search form to have bordered search box -->
+                <!-- DOC: Apply "sidebar-search-bordered sidebar-search-solid" class the below search form to have bordered & solid search box -->
+
+                <!-- END RESPONSIVE QUICK SEARCH FORM -->
+                </li>
+                <li class="nav-item start active">
+                  <a href="dashboard.html" class="nav-link">
+                  <i class="icon-moon icon-menu-dashboard"></i>
+                  <span class="title">Dashboard</span>
+                  <span class="selected"></span>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="properties.html" class="nav-link">
+                  <i class="icon-moon icon-menu-properties"> </i>
+                  <span class="title">Properties</span>
+                  <span class="selected"></span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="reservations.html" class="nav-link">
+                  <i class="icon-moon icon-menu-codes"> </i>
+                  <span class="title">Reservations</span>
+                  <span class="selected"></span>
+                  </a>
+                </li>
+    			 <li class="nav-item  ">
+                      <a href="staffs_settings.html" class="nav-link ">
+    				  <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                        <span class="title">Staff</span>
+    					 <span class="selected"></span>
+                      </a>
+                    </li>
+    				 <li class="nav-item">
+                      <a href="resident_invite.html" class="nav-link ">
+    				 <i class="icon-envelope-letter" aria-hidden="true"></i>
+                        <span class="title">Resident Invite</span>
+    					 <span class="selected"></span>
+                      </a>
+                    </li>
+                <li class="nav-item">
+                  <a href="settings.html" class="nav-link">
+                  <i class="icon-moon icon-menu-settings"></i>
+                  <span class="title">Settings</span>
+                  </a>
+                  <ul class="sub-menu">
+                    <li class="nav-item">
+                      <a href="views/reservation_settings.html" class="nav-link ">
+                        <span class="title"><i class="fa fa-refresh" aria-hidden="true"></i> Reservation Settings</span>
+                      </a>
+                    </li>
+                    <li class="nav-item  ">
+                      <a href="#" class="nav-link ">
+                        <span class="title"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Notifications </span>
+                      </a>
+                    </li>
+                    <li class="nav-item  ">
+                      <a href="#" class="nav-link ">
+                        <span class="title"><i class="fa fa-building" aria-hidden="true"></i> Company Details </span>
+                      </a>
+                    </li>
+                    <li class="nav-item  ">
+                      <a href="#" class="nav-link ">
+                        <span class="title"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard </span>
+                      </a>
+                    </li>
+
+                    <li class="nav-item  ">
+                      <a href="#" class="nav-link ">
+                        <span class="title"><i class="fa fa-users" aria-hidden="true"></i> Groups </span>
+                      </a>
+                    </li>
+                    <li class="nav-item  ">
+                      <a href="#" class="nav-link ">
+                        <span class="title"><i class="fa fa-lock" aria-hidden="true"></i> Locks</span>
+                      </a>
+                    </li>
+                    <li class="nav-item  ">
+                      <a href="#" class="nav-link ">
+                        <span class="title"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Lighting</span>
+                      </a>
+                    </li>
+                    <li class="nav-item  ">
+                      <a href="#" class="nav-link ">
+                        <span class="title"><i class="fa fa-thermometer-full" aria-hidden="true"></i> Thermostat </span>
+                      </a>
+                    </li>
+                    <li class="nav-item  ">
+                      <a href="#" class="nav-link ">
+                        <span class="title"><i class="fa fa-user-secret" aria-hidden="true"></i> Monitoring </span>
+                      </a>
+                    </li>
+                    <li class="nav-item  ">
+                      <a href="#" class="nav-link ">
+                        <span class="title"><i class="fa fa-tint" aria-hidden="true"></i> Damage Prevention</span>
+                      </a>
+                    </li>
+                    <li class="nav-item  ">
+                      <a href="#" class="nav-link ">
+                        <span class="title"><i class="fa fa-podcast" aria-hidden="true"></i> Contact Sensor</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="javascript:;" class="nav-link">
+                  <i class="icon-moon icon-menu-support"> </i>
+                  <span class="title">Support</span>
+                  <span class="selected"></span>
+                  </a>
+                </li>
+              </ul>
+              <!-- END SIDEBAR MENU -->
+              <!-- END SIDEBAR MENU -->
+            </div>
+            <!-- END SIDEBAR -->
+          </div>
+          <!-- END SIDEBAR -->
+        <!-- BEGIN CONTENT -->
+        <div class="page-content-wrapper">
+          <!-- BEGIN CONTENT BODY -->
+          <div class="page-content">
+            <!-- BEGIN PAGE HEADER-->
+            <!-- BEGIN THEME PANEL -->
+            <!-- END THEME PANEL -->
+            <!-- BEGIN PAGE BAR -->
+            <!-- END PAGE BAR -->
+            <!-- BEGIN PAGE TITLE-->
+            <h1 class="page-title">Dashboard </h1>
+            <!-- END PAGE TITLE-->
+            <!-- END PAGE HEADER-->
+            <!-- BEGIN DASHBOARD STATS 1-->
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <div class="box-dashboard dashboard-stat red-pink">
+                  <h2><span>System Alert</span> <i class="fa fa-envelope-open" aria-hidden="true"></i></h2>
+                  <ul>
+                    <li><a href="" data-toggle="tooltip" title="system offline"><span data-counter="counterup" data-value="13">13</span> system offline</a></li>
+                    <li><a href="" data-toggle="tooltip" title="low battery"><span data-counter="counterup" data-value="17">17</span> low battery</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <div class="box-dashboard dashboard-stat green-meadow">
+                  <h2><span>Utility Usage</span>  <i class="fa fa-signal" aria-hidden="true"></i></h2>
+                  <ul>
+                    <li><a href="" data-toggle="tooltip" title="kw/h last week"><span data-counter="counterup" data-value="180">180</span> kw/h last week</a></li>
+                    <li><a href="" data-toggle="tooltip" title="average running hours"><span data-counter="counterup" data-value="98">98</span> average running hours</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <div class="box-dashboard dashboard-stat blue-sharp">
+                  <h2><span>Occupancy</span> <i class="fa fa-home" aria-hidden="true"></i></h2>
+                  <ul>
+                    <li><a href="" data-toggle="tooltip" title="Invitations pending"><span data-counter="counterup" data-value="8">8</span> Invitations pending</a></li>
+                    <li><a href="" data-toggle="tooltip" title="Occupied"><span data-counter="counterup" data-value="89" title="Occupied">89</span><span>%</span> Occupied</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <div class="box-dashboard dashboard-stat yellow-casablanca">
+                  <h2><span>Revervation</span>  <i class="fa fa-suitcase" aria-hidden="true"></i></h2>
+                  <ul>
+                    <li><a href="" data-toggle="tooltip" title="check-ins today"><span data-counter="counterup" data-value="8">8</span> check-ins today</a></li>
+                    <li><a href="" data-toggle="tooltip" title="check-outs today"><span data-counter="counterup" data-value="9">9</span> check-outs today</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="row">
+              <div class="col-lg-6 col-xs-12 col-sm-12">
+                <!-- BEGIN PORTLET-->
+                <div class="portlet light bordered">
+                  <div class="portlet-title">
+                    <div class="caption">
+                      <i class="icon-bar-chart font-dark hide"></i>
+                      <span class="caption-subject font-dark bold uppercase">Site Visits</span>
+                      <span class="caption-helper">weekly stats...</span>
+                    </div>
+                    <div class="actions">
+                      <div class="btn-group btn-group-devided" data-toggle="buttons">
+                        <label class="btn red btn-outline btn-circle btn-sm active">
+                          <input type="radio" name="options" class="toggle" id="option1">New</label>
+                        <label class="btn red btn-outline btn-circle btn-sm">
+                          <input type="radio" name="options" class="toggle" id="option2">Returning</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="portlet-body">
+                    <div id="site_statistics_loading">
+                      <img src="../assets/global/img/loading.gif" alt="loading" /> </div>
+                    <div id="site_statistics_content" class="display-none">
+                      <div id="site_statistics" class="chart"> </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END PORTLET-->
+              </div>
+              <div class="col-lg-6 col-xs-12 col-sm-12">
+                <!-- BEGIN PORTLET-->
+                <div class="portlet light bordered">
+                  <div class="portlet-title">
+                    <div class="caption">
+                      <i class="icon-share font-red-sunglo hide"></i>
+                      <span class="caption-subject font-dark bold uppercase">Revenue</span>
+                      <span class="caption-helper">monthly stats...</span>
+                    </div>
+                    <div class="actions">
+                      <div class="btn-group">
+                        <a href="" class="btn dark btn-outline btn-circle btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> Filter Range
+                          <span class="fa fa-angle-down"> </span>
+                        </a>
+                        <ul class="dropdown-menu pull-right">
+                          <li>
+                            <a href="javascript:;"> Q1 2014
+                              <span class="label label-sm label-default"> past </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="javascript:;"> Q2 2014
+                              <span class="label label-sm label-default"> past </span>
+                            </a>
+                          </li>
+                          <li class="active">
+                            <a href="javascript:;"> Q3 2014
+                              <span class="label label-sm label-success"> current </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="javascript:;"> Q4 2014
+                              <span class="label label-sm label-warning"> upcoming </span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="portlet-body">
+                    <div id="site_activities_loading">
+                      <img src="../assets/global/img/loading.gif" alt="loading" /> </div>
+                    <div id="site_activities_content" class="display-none">
+                      <div id="site_activities" style="height: 228px;"> </div>
+                    </div>
+                    <div style="margin: 20px 0 10px 30px">
+                      <div class="row">
+                        <div class="col-md-3 col-sm-3 col-xs-6 text-stat">
+                          <span class="label label-sm label-success"> Revenue: </span>
+                          <h3>$13,234</h3>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-6 text-stat">
+                          <span class="label label-sm label-info"> Tax: </span>
+                          <h3>$134,900</h3>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-6 text-stat">
+                          <span class="label label-sm label-danger"> Shipment: </span>
+                          <h3>$1,134</h3>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-6 text-stat">
+                          <span class="label label-sm label-warning"> Orders: </span>
+                          <h3>235090</h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END PORTLET-->
+              </div>
+            </div>
+            <a href="dashboard_settings.html" class="btn green btn-circle btn-outline dashboard_customize_bttn"><i class="icon-moon icon-menu-settings"></i> Dashboard customize</a>
+            <div class="clearfix"></div>
+            <!-- END DASHBOARD STATS 1-->
+          </div>
+          <!-- END CONTENT BODY -->
+        </div>
+        <!-- END CONTENT -->
+      </div>
+      <!-- END CONTAINER -->
+      <!-- BEGIN FOOTER -->
+      <div class="page-footer">
+        <div class="page-footer-inner"> 2017 &copy; Rently keyless
+        </div>
+        <div class="scroll-to-top">
+          <i class="icon-arrow-up"></i>
+        </div>
+      </div>
+      <!-- END FOOTER -->
+    </div>
+    <!--[if lt IE 9]>
+    <script src="../assets/global/plugins/respond.min.js"></script>
+    <script src="../assets/global/plugins/excanvas.min.js"></script>
+    <script src="../assets/global/plugins/ie8.fix.min.js"></script>
+    <![endif]-->
+    <script>
+      jQuery(document).ready(function($) {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+    <!-- END THEME LAYOUT SCRIPTS -->
+  </body>
+</html>
