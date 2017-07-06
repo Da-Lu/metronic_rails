@@ -21,4 +21,5 @@
 //= require metronic
 //= require bootstrap-switch
 
+//= stub dashboard
 //= require_tree .

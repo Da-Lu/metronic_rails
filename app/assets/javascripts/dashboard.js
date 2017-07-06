@@ -28,6 +28,7 @@ jQuery(document).ready(function($) {
   }
   toastr.warning('Have fun storming the castle!', 'Miracle Max Says');
 });
+
 var Dashboard = function() {
 
     return {
